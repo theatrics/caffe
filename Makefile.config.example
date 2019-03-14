@@ -6,8 +6,7 @@
 
 # CPU-only switch (uncomment to build without GPU support).
 # CPU_ONLY := 1
-INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/include/hdf5/serial/
-LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+
 # uncomment to disable IO dependencies and corresponding data layers
 # USE_OPENCV := 0
 # USE_LEVELDB := 0
@@ -57,6 +56,9 @@ BLAS := open
 # (which should work)!
 # BLAS_INCLUDE := /path/to/your/blas
 # BLAS_LIB := /path/to/your/blas
+
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/include/hdf5/serial/
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
 
 # Homebrew puts openblas in a directory that is not on the standard search path
 # BLAS_INCLUDE := $(shell brew --prefix openblas)/include
